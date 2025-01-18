@@ -125,6 +125,7 @@
             this.txtProductoAplicado.Name = "txtProductoAplicado";
             this.txtProductoAplicado.Size = new System.Drawing.Size(199, 20);
             this.txtProductoAplicado.TabIndex = 6;
+            this.txtProductoAplicado.TextChanged += new System.EventHandler(this.txtProductoAplicado_TextChanged);
             // 
             // dtpFechaAplicacion
             // 

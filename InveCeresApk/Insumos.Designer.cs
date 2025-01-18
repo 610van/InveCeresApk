@@ -226,7 +226,7 @@
             // 
             // txtRuta
             // 
-            this.txtRuta.Location = new System.Drawing.Point(224, 415);
+            this.txtRuta.Location = new System.Drawing.Point(224, 413);
             this.txtRuta.Name = "txtRuta";
             this.txtRuta.Size = new System.Drawing.Size(121, 20);
             this.txtRuta.TabIndex = 30;

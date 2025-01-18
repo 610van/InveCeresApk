@@ -175,6 +175,11 @@ namespace InveCeresApk
         {
             
         }
+
+        private void txtProductoAplicado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
