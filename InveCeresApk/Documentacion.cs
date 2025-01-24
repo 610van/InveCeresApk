@@ -11,12 +11,15 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Org.BouncyCastle.Pqc.Crypto.Lms;
+using System.Data.SqlClient;
 
 namespace InveCeresApk
 {
     public partial class Documentacion : Form
     {
-        ClassSeguimiento classSeguimiento = new ClassSeguimiento ();
+        ClassSeguimiento classSeguimiento = new ClassSeguimiento();
+        ClassConexion conexion = ClassConexion.getInstancia();
+
         public Documentacion()
         {
             InitializeComponent();
@@ -31,6 +34,13 @@ namespace InveCeresApk
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Verificar si se seleccionó información (por ejemplo, si el txtReporte tiene texto)
+            if (string.IsNullOrEmpty(txtReporte.Text) && ListaCampos.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione la información a generar antes de crear el PDF.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Salir del método sin generar el PDF
+            }
+
             string outputPath = "C:\\Users\\MA VICTORIA GIL MTZ\\source\\repos\\InveCeresApk\\EjemploPDF.pdf";
 
             // Crear el documento
@@ -118,7 +128,7 @@ namespace InveCeresApk
                
 
                 // Footer
-                Paragraph footer = new Paragraph("Generado con iTextSharp", normalFont);
+                Paragraph footer = new Paragraph("CERES S.A DE C.V", normalFont);
                 footer.Alignment = Element.ALIGN_CENTER;
                 document.Add(footer);
             }
@@ -134,8 +144,10 @@ namespace InveCeresApk
 
         public void cargarDGBSeguimiento()
         {
-            dgbMostrar.DataSource = classSeguimiento.SeguimientoDGB();
+            //dgbMostrar.DataSource = classSeguimiento.SeguimientoDGB();
         }
+
+
 
         private void Documentacion_Load(object sender, EventArgs e)
         {
@@ -145,14 +157,14 @@ namespace InveCeresApk
 
         private void txtcampo_TextChanged(object sender, EventArgs e)
         {
-            if (txtcampo.Text.Length == 0)
-            {
-                cargarDGBSeguimiento();
-            }
-            else
-            {
-                dgbMostrar.DataSource = classSeguimiento.Buscar(txtcampo.Text);
-            }
+           // if (txtcampo.Text.Length == 0)
+           // {
+             //   cargarDGBSeguimiento();
+            //}
+          //  else
+           // {
+                //dgbMostrar.DataSource = classSeguimiento.Buscar(txtcampo.Text);
+            //}
         }
 
         private void Documentacion_Load_1(object sender, EventArgs e)
@@ -161,6 +173,48 @@ namespace InveCeresApk
         }
 
         private void txtproducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FechaFin_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtReporte_TextChanged(object sender, EventArgs e)
+        {
+            if (txtReporte.Text.Length == 0)
+            {
+                cargarDGBSeguimiento();
+            }
+            else
+            {
+                //dgbMostrar.DataSource = classSeguimiento.Buscar(txtReporte.Text);
+            }
+        }
+
+        private void ListaCampos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

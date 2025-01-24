@@ -103,6 +103,16 @@ namespace InveCeresApk.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Grupo_Ceres {
+            get {
+                object obj = ResourceManager.GetObject("Grupo-Ceres", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_20241221_WA0004 {
             get {
                 object obj = ResourceManager.GetObject("IMG-20241221-WA0004", resourceCulture);

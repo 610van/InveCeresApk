@@ -182,6 +182,9 @@
   <ItemGroup>
     <None Include="Resources\IMG-20241221-WA0004.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupo-Ceres.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

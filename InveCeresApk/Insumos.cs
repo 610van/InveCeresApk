@@ -198,5 +198,10 @@ namespace InveCeresApk
             }
         
         }
+
+        private void txtRuta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
