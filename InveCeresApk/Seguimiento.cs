@@ -132,6 +132,7 @@ namespace InveCeresApk
             }
         }
         private int longitudAnterior = 0;
+  
         private void txtNombreCampo_TextChanged(object sender, EventArgs e)
         {
           

@@ -13,6 +13,7 @@ namespace InveCeresApk
     public class ClassControl
     {
         ClassConexion conexion = ClassConexion.getInstancia();
+        ClassSeguimiento classSeguimiento = new ClassSeguimiento();
         public DataTable ControlDGB()
         {
             DataTable dt = new DataTable();
@@ -141,6 +142,7 @@ namespace InveCeresApk
             }
             return listaMelgas;
         }
+
         public DataTable Buscar(string VALOR1)
         {
             DataTable dt = new DataTable();
