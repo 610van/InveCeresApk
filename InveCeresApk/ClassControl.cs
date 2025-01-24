@@ -30,6 +30,23 @@ namespace InveCeresApk
             }
             return dt;
         }
+        public DataTable ControlFecha(string fecha1, string fecha2)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SQLiteConnection con = conexion.crearConexion())
+                {
+                    string consulta = $"SELECT * FROM Seguimiento WHERE FechaAplicacion BETWEEN '{fecha1}' AND '{fecha2}'; ";
+                    dt = conexion.EjecutarConsulta(consulta);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los datos de la tabla Control." + ex.Message);
+            }
+            return dt;
+        }
         public void insertaregistro(
             string nombre, string hectarea, string melgas, string tipoPiña, string referencias)
         {

@@ -35,7 +35,7 @@ namespace InveCeresApk
         {
             try
             {
-                string consulta = $"INSERT INTO Seguimiento (NombreCampo, ProductoAplicado, FechaAplicacion, SeguimientoAplicacio, Observaciones) Values('{nombreCampo}','{productoAplicado}','{fechaAplicacion}','{seguimientoAplicado}','{observaciones}',)";
+                string consulta = $"INSERT INTO Seguimiento (NombreCampo, ProductoAplicado, FechaAplicacion, SeguimientoAplicacio, Observaciones) Values('{nombreCampo}','{productoAplicado}','{fechaAplicacion}','{seguimientoAplicado}','{observaciones}')";
                 conexion.consultaSQL(consulta);
                 MessageBox.Show("Registro Guardado");
             }

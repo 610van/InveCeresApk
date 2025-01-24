@@ -52,6 +52,7 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnfecha = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -185,6 +186,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnfecha);
             this.panel2.Controls.Add(this.ListaCampos);
             this.panel2.Controls.Add(this.FechaFin);
             this.panel2.Controls.Add(this.FechaInicio);
@@ -245,7 +247,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(249, 389);
+            this.button1.Location = new System.Drawing.Point(264, 397);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 31);
             this.button1.TabIndex = 11;
@@ -314,6 +316,17 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "CERES S.A. DE C.V.";
             // 
+            // btnfecha
+            // 
+            this.btnfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfecha.Location = new System.Drawing.Point(249, 324);
+            this.btnfecha.Name = "btnfecha";
+            this.btnfecha.Size = new System.Drawing.Size(185, 31);
+            this.btnfecha.TabIndex = 18;
+            this.btnfecha.Text = "Confirmar Datos";
+            this.btnfecha.UseVisualStyleBackColor = true;
+            this.btnfecha.Click += new System.EventHandler(this.btnfecha_Click);
+            // 
             // Documentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,5 +375,6 @@
         private System.Windows.Forms.DateTimePicker FechaInicio;
         private System.Windows.Forms.ListBox ListaCampos;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnfecha;
     }
 }

@@ -36,6 +36,11 @@ namespace InveCeresApk
 
         private void button1_Click(object sender, EventArgs e)
         {
+            generarPdf(dataGridView1);
+            btnfecha_Click(sender, e);
+        }
+        public void generarPdf(DataGridView dgv) 
+        {
             // Verificar si se seleccionó información (por ejemplo, si el txtReporte tiene texto)
             if (string.IsNullOrEmpty(txtReporte.Text) && ListaCampos.SelectedItem == null)
             {
@@ -55,7 +60,7 @@ namespace InveCeresApk
                 document.Open();
 
                 // Agregar imagen en la parte superior izquierda
-                string imagePath = "C:\\Users\\MA VICTORIA GIL MTZ\\source\\repos\\InveCeresApk\\Grupo-Ceres.png"; 
+                string imagePath = "C:\\Users\\MA VICTORIA GIL MTZ\\source\\repos\\InveCeresApk\\Grupo-Ceres.png";
                 if (File.Exists(imagePath))
                 {
                     iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(imagePath);
@@ -104,30 +109,36 @@ namespace InveCeresApk
                 document.Add(new Paragraph("\n")); // Espaciado
                 document.Add(new Paragraph("\n")); // Espaciado
 
-                // Tabla
-                PdfPTable table = new PdfPTable(3); // 3 columnas
-                table.WidthPercentage = 100;
+                document.Add(new Paragraph("\n")); // Espaciado
 
-                // Agregar encabezados
-                var headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.WHITE);
-                PdfPCell header1 = new PdfPCell(new Phrase("Columna 1", headerFont)) { BackgroundColor = BaseColor.DARK_GRAY };
-                PdfPCell header2 = new PdfPCell(new Phrase("Columna 2", headerFont)) { BackgroundColor = BaseColor.DARK_GRAY };
-                PdfPCell header3 = new PdfPCell(new Phrase("Columna 3", headerFont)) { BackgroundColor = BaseColor.DARK_GRAY };
+                // Crear una tabla con el número de columnas del DataGridView y ajustar tamaño
+                PdfPTable tabla = new PdfPTable(dgv.ColumnCount);
+                tabla.WidthPercentage = 85; // Ajustar a 80% del ancho de la página
+                tabla.HorizontalAlignment = Element.ALIGN_CENTER; // Centrar la tabla
 
-                table.AddCell(header1);
-                table.AddCell(header2);
-                table.AddCell(header3);
-
-                // Agregar datos
-                for (int i = 1; i <= 9; i++)
+                // Agregar encabezados de columna
+                foreach (DataGridViewColumn columna in dgv.Columns)
                 {
-                    table.AddCell($"Dato {i}");
+                    PdfPCell celdaEncabezado = new PdfPCell(new Phrase(columna.HeaderText));
+                    celdaEncabezado.BackgroundColor = new BaseColor(240, 240, 240); // Color gris claro
+                    celdaEncabezado.HorizontalAlignment = Element.ALIGN_CENTER;
+                    tabla.AddCell(celdaEncabezado);
                 }
 
-                document.Add(table);
+                // Agregar filas de datos
+                foreach (DataGridViewRow fila in dgv.Rows)
+                {
+                    if (!fila.IsNewRow) // Evitar fila de edición vacía
+                    {
+                        foreach (DataGridViewCell celda in fila.Cells)
+                        {
+                            tabla.AddCell(celda.Value?.ToString() ?? string.Empty);
+                        }
+                    }
+                }
 
-                document.Add(new Paragraph("\n")); // Espaciado
-               
+                // Añadir la tabla al documento
+                document.Add(tabla);
 
                 // Footer
                 Paragraph footer = new Paragraph("CERES S.A DE C.V", normalFont);
@@ -142,6 +153,7 @@ namespace InveCeresApk
             {
                 document.Close();
             }
+
         }
 
         public void cargarDGBSeguimiento()
@@ -240,6 +252,15 @@ namespace InveCeresApk
             {
                 MessageBox.Show("No se encontraron datos en la tabla Control.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
+        }
+
+        private void btnfecha_Click(object sender, EventArgs e)
+        {
+            string fechaSeleccionada = FechaInicio.Value.ToString("dd/MM/yyyy");
+            string fechaSeleccionada2 = FechaFin.Value.ToString("dd/MM/yyyy");
+            dataGridView1.DataSource = classControl.ControlFecha(fechaSeleccionada, fechaSeleccionada2);
+
         }
     }
 }

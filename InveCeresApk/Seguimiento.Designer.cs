@@ -33,7 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNombreCampo = new System.Windows.Forms.TextBox();
             this.txtProductoAplicado = new System.Windows.Forms.TextBox();
             this.dtpFechaAplicacion = new System.Windows.Forms.DateTimePicker();
             this.txtSeguimientoAplicacion = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNombreCampo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGBSeguimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -110,14 +110,6 @@
             this.label5.Size = new System.Drawing.Size(137, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "Observaciones";
-            // 
-            // txtNombreCampo
-            // 
-            this.txtNombreCampo.Location = new System.Drawing.Point(312, 89);
-            this.txtNombreCampo.Name = "txtNombreCampo";
-            this.txtNombreCampo.Size = new System.Drawing.Size(199, 20);
-            this.txtNombreCampo.TabIndex = 5;
-            this.txtNombreCampo.TextChanged += new System.EventHandler(this.txtNombreCampo_TextChanged);
             // 
             // txtProductoAplicado
             // 
@@ -291,6 +283,14 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
+            // txtNombreCampo
+            // 
+            this.txtNombreCampo.Location = new System.Drawing.Point(312, 89);
+            this.txtNombreCampo.Name = "txtNombreCampo";
+            this.txtNombreCampo.Size = new System.Drawing.Size(199, 20);
+            this.txtNombreCampo.TabIndex = 5;
+            this.txtNombreCampo.TextChanged += new System.EventHandler(this.txtNombreCampo_TextChanged);
+            // 
             // Seguimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,7 +341,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNombreCampo;
         private System.Windows.Forms.TextBox txtProductoAplicado;
         private System.Windows.Forms.DateTimePicker dtpFechaAplicacion;
         private System.Windows.Forms.TextBox txtSeguimientoAplicacion;
@@ -360,5 +359,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox txtNombreCampo;
     }
 }

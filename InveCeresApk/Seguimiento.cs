@@ -131,19 +131,7 @@ namespace InveCeresApk
         private int longitudAnterior = 0;
         private void txtNombreCampo_TextChanged(object sender, EventArgs e)
         {
-          if (txtNombreCampo.Text.Length > longitudAnterior)
-            {
-                if(txtNombreCampo.Text.Length >= 1)
-                {
-                    string completarCampo = classSeguimiento.complecampo(txtNombreCampo.Text);
-                    if(completarCampo!=null)
-                    {
-                       txtNombreCampo.Text = completarCampo;
-                        
-                    }
-                }
-          }
-          longitudAnterior = txtNombreCampo.Text.Length;
+          
         }
 
 
