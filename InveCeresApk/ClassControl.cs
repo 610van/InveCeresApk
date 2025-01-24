@@ -115,6 +115,32 @@ namespace InveCeresApk
             }
             return listaCampos;
         }
+        public List<string> ObtenerCamposMelgas()
+        {
+            List<string> listaMelgas = new List<string>();
+            try
+            {
+                string consulta = "SELECT DISTINCT Melgas FROM Control";
+                using (SQLiteConnection conn = ClassConexion.getInstancia().crearConexion())
+                {
+                    using (SQLiteCommand cmd = new SQLiteCommand(consulta, conn))
+                    {
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                listaMelgas.Add(reader["Melgas"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los datos de la tabla Control: " + ex.Message);
+            }
+            return listaMelgas;
+        }
         public DataTable Buscar(string VALOR1)
         {
             DataTable dt = new DataTable();

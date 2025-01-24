@@ -45,9 +45,19 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnReferencia = new System.Windows.Forms.Button();
-            this.PBFoto = new System.Windows.Forms.PictureBox();
             this.txtRuta = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PBFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGBControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 120);
+            this.label1.Location = new System.Drawing.Point(118, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 24);
             this.label1.TabIndex = 0;
@@ -95,7 +105,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(224, 120);
+            this.txtNombre.Location = new System.Drawing.Point(224, 127);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 6;
@@ -117,9 +127,9 @@
             // DGBControl
             // 
             this.DGBControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGBControl.Location = new System.Drawing.Point(381, 121);
+            this.DGBControl.Location = new System.Drawing.Point(582, 97);
             this.DGBControl.Name = "DGBControl";
-            this.DGBControl.Size = new System.Drawing.Size(816, 464);
+            this.DGBControl.Size = new System.Drawing.Size(615, 493);
             this.DGBControl.TabIndex = 18;
             this.DGBControl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGBControl_CellClick);
             this.DGBControl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -178,7 +188,7 @@
             // 
             // txthectareas
             // 
-            this.txthectareas.Location = new System.Drawing.Point(222, 208);
+            this.txthectareas.Location = new System.Drawing.Point(224, 208);
             this.txthectareas.Name = "txthectareas";
             this.txthectareas.Size = new System.Drawing.Size(121, 20);
             this.txthectareas.TabIndex = 25;
@@ -215,6 +225,64 @@
             this.btnReferencia.UseVisualStyleBackColor = true;
             this.btnReferencia.Click += new System.EventHandler(this.btnReferencia_Click);
             // 
+            // txtRuta
+            // 
+            this.txtRuta.Location = new System.Drawing.Point(224, 411);
+            this.txtRuta.Name = "txtRuta";
+            this.txtRuta.Size = new System.Drawing.Size(121, 20);
+            this.txtRuta.TabIndex = 30;
+            this.txtRuta.TextChanged += new System.EventHandler(this.txtRuta_TextChanged);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::InveCeresApk.Properties.Resources.mapa;
+            this.pictureBox5.Location = new System.Drawing.Point(398, 473);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(101, 71);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 35;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::InveCeresApk.Properties.Resources.pina;
+            this.pictureBox4.Location = new System.Drawing.Point(398, 338);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(101, 71);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::InveCeresApk.Properties.Resources.siembra;
+            this.pictureBox3.Location = new System.Drawing.Point(398, 261);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(101, 71);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::InveCeresApk.Properties.Resources.campo_3;
+            this.pictureBox2.Location = new System.Drawing.Point(398, 184);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(101, 71);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::InveCeresApk.Properties.Resources.campo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(398, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
             // PBFoto
             // 
             this.PBFoto.Location = new System.Drawing.Point(224, 456);
@@ -224,19 +292,16 @@
             this.PBFoto.TabIndex = 29;
             this.PBFoto.TabStop = false;
             // 
-            // txtRuta
-            // 
-            this.txtRuta.Location = new System.Drawing.Point(224, 413);
-            this.txtRuta.Name = "txtRuta";
-            this.txtRuta.Size = new System.Drawing.Size(121, 20);
-            this.txtRuta.TabIndex = 30;
-            this.txtRuta.TextChanged += new System.EventHandler(this.txtRuta_TextChanged);
-            // 
             // Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 700);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtRuta);
             this.Controls.Add(this.PBFoto);
             this.Controls.Add(this.btnReferencia);
@@ -259,6 +324,11 @@
             this.Name = "Control";
             this.Load += new System.EventHandler(this.Control_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGBControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -286,5 +356,10 @@
         private System.Windows.Forms.Button btnReferencia;
         private System.Windows.Forms.PictureBox PBFoto;
         private System.Windows.Forms.TextBox txtRuta;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

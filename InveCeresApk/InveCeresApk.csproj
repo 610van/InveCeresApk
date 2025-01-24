@@ -185,6 +185,30 @@
   <ItemGroup>
     <None Include="Resources\Grupo-Ceres.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\campo 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\campo 3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siembra.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pina.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapa.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupo-Ceres1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base-de-datos.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferencia-de-archivos.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

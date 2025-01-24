@@ -13,6 +13,9 @@ namespace InveCeresApk
     public partial class Seguimiento : Form
     {
         ClassSeguimiento classSeguimiento = new ClassSeguimiento();
+        ClassConexion conexion = ClassConexion.getInstancia();
+        ClassControl classControl = new ClassControl();
+
         public Seguimiento()
         {
             InitializeComponent();
@@ -157,6 +160,24 @@ namespace InveCeresApk
         private void Seguimiento_Load_1(object sender, EventArgs e)
         {
             cargarDBGSeguimiento();
+            List<string> listaMelgas = classControl.ObtenerCamposMelgas();
+
+            if (listaMelgas.Count > 0)
+            {
+                // Llena el ListBox con los valores de la lista.
+                Melgas.Items.Clear(); // Limpia cualquier elemento previo en el ListBox.
+                foreach (var campo in listaMelgas)
+                {
+                    Melgas.Items.Add(campo);
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron datos en la tabla Control.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void CMBMelgas_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,6 +186,11 @@ namespace InveCeresApk
         }
 
         private void txtProductoAplicado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Melgas_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

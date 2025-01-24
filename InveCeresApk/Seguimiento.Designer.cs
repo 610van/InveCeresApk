@@ -45,13 +45,13 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelmelgas = new System.Windows.Forms.Label();
-            this.CMBMelgas = new System.Windows.Forms.ComboBox();
+            this.txtNombreCampo = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtNombreCampo = new System.Windows.Forms.TextBox();
+            this.Melgas = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGBSeguimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -224,14 +224,13 @@
             this.labelmelgas.TabIndex = 30;
             this.labelmelgas.Text = "Melgas";
             // 
-            // CMBMelgas
+            // txtNombreCampo
             // 
-            this.CMBMelgas.FormattingEnabled = true;
-            this.CMBMelgas.Location = new System.Drawing.Point(370, 548);
-            this.CMBMelgas.Name = "CMBMelgas";
-            this.CMBMelgas.Size = new System.Drawing.Size(79, 21);
-            this.CMBMelgas.TabIndex = 31;
-            this.CMBMelgas.SelectedIndexChanged += new System.EventHandler(this.CMBMelgas_SelectedIndexChanged);
+            this.txtNombreCampo.Location = new System.Drawing.Point(312, 89);
+            this.txtNombreCampo.Name = "txtNombreCampo";
+            this.txtNombreCampo.Size = new System.Drawing.Size(199, 20);
+            this.txtNombreCampo.TabIndex = 5;
+            this.txtNombreCampo.TextChanged += new System.EventHandler(this.txtNombreCampo_TextChanged);
             // 
             // pictureBox5
             // 
@@ -283,24 +282,25 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // txtNombreCampo
+            // Melgas
             // 
-            this.txtNombreCampo.Location = new System.Drawing.Point(312, 89);
-            this.txtNombreCampo.Name = "txtNombreCampo";
-            this.txtNombreCampo.Size = new System.Drawing.Size(199, 20);
-            this.txtNombreCampo.TabIndex = 5;
-            this.txtNombreCampo.TextChanged += new System.EventHandler(this.txtNombreCampo_TextChanged);
+            this.Melgas.FormattingEnabled = true;
+            this.Melgas.Location = new System.Drawing.Point(312, 538);
+            this.Melgas.Name = "Melgas";
+            this.Melgas.Size = new System.Drawing.Size(199, 30);
+            this.Melgas.TabIndex = 36;
+            this.Melgas.SelectedIndexChanged += new System.EventHandler(this.Melgas_SelectedIndexChanged);
             // 
             // Seguimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 669);
+            this.Controls.Add(this.Melgas);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.CMBMelgas);
             this.Controls.Add(this.labelmelgas);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -321,7 +321,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Seguimiento";
-            this.Text = "Seguimiento";
             this.Load += new System.EventHandler(this.Seguimiento_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.DGBSeguimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -354,11 +353,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelmelgas;
-        private System.Windows.Forms.ComboBox CMBMelgas;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtNombreCampo;
+        private System.Windows.Forms.ListBox Melgas;
     }
 }

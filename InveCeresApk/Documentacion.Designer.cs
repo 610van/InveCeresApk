@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -37,9 +38,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnfecha = new System.Windows.Forms.Button();
             this.ListaCampos = new System.Windows.Forms.ListBox();
             this.FechaFin = new System.Windows.Forms.DateTimePicker();
             this.FechaInicio = new System.Windows.Forms.DateTimePicker();
@@ -51,12 +52,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnfecha = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,6 +78,16 @@
             this.panel1.Size = new System.Drawing.Size(505, 458);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(213, 413);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 7);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "CERES S.A. DE C.V.";
             // 
             // dataGridView1
             // 
@@ -164,16 +174,6 @@
             this.label7.Text = "Comercializadora agricola CERES S.A DE C.V";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::InveCeresApk.Properties.Resources.Grupo_Ceres;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -200,6 +200,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(483, 458);
             this.panel2.TabIndex = 1;
+            // 
+            // btnfecha
+            // 
+            this.btnfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfecha.Location = new System.Drawing.Point(249, 329);
+            this.btnfecha.Name = "btnfecha";
+            this.btnfecha.Size = new System.Drawing.Size(185, 31);
+            this.btnfecha.TabIndex = 18;
+            this.btnfecha.Text = "Confirmar Datos";
+            this.btnfecha.UseVisualStyleBackColor = true;
+            this.btnfecha.Click += new System.EventHandler(this.btnfecha_Click);
             // 
             // ListaCampos
             // 
@@ -238,7 +249,7 @@
             // 
             // txtReporte
             // 
-            this.txtReporte.Location = new System.Drawing.Point(239, 39);
+            this.txtReporte.Location = new System.Drawing.Point(249, 39);
             this.txtReporte.Name = "txtReporte";
             this.txtReporte.Size = new System.Drawing.Size(210, 20);
             this.txtReporte.TabIndex = 12;
@@ -247,7 +258,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(264, 397);
+            this.button1.Location = new System.Drawing.Point(265, 397);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 31);
             this.button1.TabIndex = 11;
@@ -306,26 +317,15 @@
             this.lbl.TabIndex = 3;
             this.lbl.Text = "Generación de reportes";
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(213, 413);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 7);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "CERES S.A. DE C.V.";
-            // 
-            // btnfecha
-            // 
-            this.btnfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfecha.Location = new System.Drawing.Point(249, 324);
-            this.btnfecha.Name = "btnfecha";
-            this.btnfecha.Size = new System.Drawing.Size(185, 31);
-            this.btnfecha.TabIndex = 18;
-            this.btnfecha.Text = "Confirmar Datos";
-            this.btnfecha.UseVisualStyleBackColor = true;
-            this.btnfecha.Click += new System.EventHandler(this.btnfecha_Click);
+            this.pictureBox1.Image = global::InveCeresApk.Properties.Resources.Grupo_Ceres;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // Documentacion
             // 
@@ -341,9 +341,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
