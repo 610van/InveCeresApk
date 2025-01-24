@@ -72,6 +72,32 @@ namespace InveCeresApk
                 MessageBox.Show("Error" + ex.Message);
             }
         }
+        public List<string> ObtenerCamposDistintos()
+        {
+            List<string> listaCampos = new List<string>();
+            try
+            {
+                string consulta = "SELECT DISTINCT Campo FROM Control";
+                using (SQLiteConnection conn = ClassConexion.getInstancia().crearConexion())
+                {
+                    using (SQLiteCommand cmd = new SQLiteCommand(consulta, conn))
+                    {
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                listaCampos.Add(reader["Campo"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los datos de la tabla Control: " + ex.Message);
+            }
+            return listaCampos;
+        }
         public DataTable Buscar(string VALOR1)
         {
             DataTable dt = new DataTable();

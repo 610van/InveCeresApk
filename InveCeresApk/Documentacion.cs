@@ -12,6 +12,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Org.BouncyCastle.Pqc.Crypto.Lms;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace InveCeresApk
 {
@@ -19,6 +20,7 @@ namespace InveCeresApk
     {
         ClassSeguimiento classSeguimiento = new ClassSeguimiento();
         ClassConexion conexion = ClassConexion.getInstancia();
+        ClassControl classControl = new ClassControl();
 
         public Documentacion()
         {
@@ -216,7 +218,28 @@ namespace InveCeresApk
 
         private void ListaCampos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void Documentacion_Load_2(object sender, EventArgs e)
+        {
+            List<string> listaCampos = classControl.ObtenerCamposDistintos();
+
+            if (listaCampos.Count > 0)
+            {
+                // Llena el ListBox con los valores de la lista.
+                ListaCampos.Items.Clear(); // Limpia cualquier elemento previo en el ListBox.
+                foreach (var campo in listaCampos)
+                {
+                    ListaCampos.Items.Add(campo);
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron datos en la tabla Control.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

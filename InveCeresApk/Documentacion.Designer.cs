@@ -29,17 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.dataGridView11 = new System.Windows.Forms.DataGridView();
-            this.dataGridView12 = new System.Windows.Forms.DataGridView();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -51,6 +40,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ListaCampos = new System.Windows.Forms.ListBox();
+            this.FechaFin = new System.Windows.Forms.DateTimePicker();
+            this.FechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtReporte = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,21 +51,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
-            this.FechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.FechaFin = new System.Windows.Forms.DateTimePicker();
-            this.ListaCampos = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -82,17 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Controls.Add(this.dataGridView10);
-            this.panel1.Controls.Add(this.dataGridView11);
-            this.panel1.Controls.Add(this.dataGridView12);
-            this.panel1.Controls.Add(this.dataGridView7);
-            this.panel1.Controls.Add(this.dataGridView8);
-            this.panel1.Controls.Add(this.dataGridView9);
-            this.panel1.Controls.Add(this.dataGridView4);
-            this.panel1.Controls.Add(this.dataGridView5);
-            this.panel1.Controls.Add(this.dataGridView6);
-            this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Controls.Add(this.dataGridView2);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
@@ -109,125 +78,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // dataGridView10
-            // 
-            this.dataGridView10.AllowUserToDeleteRows = false;
-            this.dataGridView10.AllowUserToOrderColumns = true;
-            this.dataGridView10.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Location = new System.Drawing.Point(289, 307);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView10.TabIndex = 36;
-            // 
-            // dataGridView11
-            // 
-            this.dataGridView11.AllowUserToDeleteRows = false;
-            this.dataGridView11.AllowUserToOrderColumns = true;
-            this.dataGridView11.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(171, 307);
-            this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView11.TabIndex = 35;
-            // 
-            // dataGridView12
-            // 
-            this.dataGridView12.AllowUserToDeleteRows = false;
-            this.dataGridView12.AllowUserToOrderColumns = true;
-            this.dataGridView12.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Location = new System.Drawing.Point(53, 307);
-            this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView12.TabIndex = 34;
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.AllowUserToDeleteRows = false;
-            this.dataGridView7.AllowUserToOrderColumns = true;
-            this.dataGridView7.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(289, 277);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView7.TabIndex = 33;
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.AllowUserToDeleteRows = false;
-            this.dataGridView8.AllowUserToOrderColumns = true;
-            this.dataGridView8.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(171, 277);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView8.TabIndex = 32;
-            // 
-            // dataGridView9
-            // 
-            this.dataGridView9.AllowUserToDeleteRows = false;
-            this.dataGridView9.AllowUserToOrderColumns = true;
-            this.dataGridView9.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(53, 277);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView9.TabIndex = 31;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.AllowUserToDeleteRows = false;
-            this.dataGridView4.AllowUserToOrderColumns = true;
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(289, 247);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView4.TabIndex = 30;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.AllowUserToDeleteRows = false;
-            this.dataGridView5.AllowUserToOrderColumns = true;
-            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(171, 247);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView5.TabIndex = 29;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.AllowUserToDeleteRows = false;
-            this.dataGridView6.AllowUserToOrderColumns = true;
-            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(53, 247);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView6.TabIndex = 28;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToOrderColumns = true;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(289, 217);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView3.TabIndex = 27;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(171, 217);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(112, 24);
-            this.dataGridView2.TabIndex = 26;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
@@ -235,7 +85,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(53, 217);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(112, 24);
+            this.dataGridView1.Size = new System.Drawing.Size(406, 168);
             this.dataGridView1.TabIndex = 25;
             // 
             // label13
@@ -349,6 +199,31 @@
             this.panel2.Size = new System.Drawing.Size(483, 458);
             this.panel2.TabIndex = 1;
             // 
+            // ListaCampos
+            // 
+            this.ListaCampos.FormattingEnabled = true;
+            this.ListaCampos.Location = new System.Drawing.Point(249, 94);
+            this.ListaCampos.Name = "ListaCampos";
+            this.ListaCampos.Size = new System.Drawing.Size(210, 95);
+            this.ListaCampos.TabIndex = 17;
+            this.ListaCampos.SelectedIndexChanged += new System.EventHandler(this.ListaCampos_SelectedIndexChanged);
+            // 
+            // FechaFin
+            // 
+            this.FechaFin.Location = new System.Drawing.Point(249, 281);
+            this.FechaFin.Name = "FechaFin";
+            this.FechaFin.Size = new System.Drawing.Size(200, 20);
+            this.FechaFin.TabIndex = 16;
+            this.FechaFin.ValueChanged += new System.EventHandler(this.FechaFin_ValueChanged);
+            // 
+            // FechaInicio
+            // 
+            this.FechaInicio.Location = new System.Drawing.Point(249, 221);
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.Size = new System.Drawing.Size(200, 20);
+            this.FechaInicio.TabIndex = 15;
+            this.FechaInicio.ValueChanged += new System.EventHandler(this.FechaInicio_ValueChanged);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -429,30 +304,15 @@
             this.lbl.TabIndex = 3;
             this.lbl.Text = "Generación de reportes";
             // 
-            // FechaInicio
+            // label4
             // 
-            this.FechaInicio.Location = new System.Drawing.Point(249, 221);
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.Size = new System.Drawing.Size(200, 20);
-            this.FechaInicio.TabIndex = 15;
-            this.FechaInicio.ValueChanged += new System.EventHandler(this.FechaInicio_ValueChanged);
-            // 
-            // FechaFin
-            // 
-            this.FechaFin.Location = new System.Drawing.Point(249, 281);
-            this.FechaFin.Name = "FechaFin";
-            this.FechaFin.Size = new System.Drawing.Size(200, 20);
-            this.FechaFin.TabIndex = 16;
-            this.FechaFin.ValueChanged += new System.EventHandler(this.FechaFin_ValueChanged);
-            // 
-            // ListaCampos
-            // 
-            this.ListaCampos.FormattingEnabled = true;
-            this.ListaCampos.Location = new System.Drawing.Point(249, 94);
-            this.ListaCampos.Name = "ListaCampos";
-            this.ListaCampos.Size = new System.Drawing.Size(210, 95);
-            this.ListaCampos.TabIndex = 17;
-            this.ListaCampos.SelectedIndexChanged += new System.EventHandler(this.ListaCampos_SelectedIndexChanged);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(213, 413);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 7);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "CERES S.A. DE C.V.";
             // 
             // Documentacion
             // 
@@ -464,19 +324,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Documentacion";
+            this.Load += new System.EventHandler(this.Documentacion_Load_2);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -507,20 +357,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridView dataGridView11;
-        private System.Windows.Forms.DataGridView dataGridView12;
-        private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker FechaFin;
         private System.Windows.Forms.DateTimePicker FechaInicio;
         private System.Windows.Forms.ListBox ListaCampos;
+        private System.Windows.Forms.Label label4;
     }
 }
