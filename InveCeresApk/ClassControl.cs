@@ -35,7 +35,7 @@ namespace InveCeresApk
         {
             try
             {
-                string consulta = $"INSERT INTO Control (Campo, Hectareas, Melgas, TipoPiña, Referencia) Values('{nombre}','{hectarea}','{melgas}','{tipoPiña}','{referencias}')";
+                string consulta = $"INSERT INTO Control (Campo, Hectareas, Melgas, TipoPiña, Referencias) Values('{nombre}','{hectarea}','{melgas}','{tipoPiña}','{referencias}')";
                 conexion.consultaSQL(consulta);
                 MessageBox.Show("Exito en el registro");
             }
@@ -63,7 +63,7 @@ namespace InveCeresApk
         {
             try
             {
-                string consulta = $"UPDATE Control SET Campo='{campo}', Hectareas= '{hectarea}', Melgas= '{melgas}', TipoPiña='{tipoPiña}', Referencia='{referencias}' WHERE Campo='{campo}'";
+                string consulta = $"UPDATE Control SET Campo='{campo}', Hectareas= '{hectarea}', Melgas= '{melgas}', TipoPiña='{tipoPiña}', Referencias='{referencias}' WHERE Campo='{campo}'";
                 conexion.consultaSQL(consulta);
                 MessageBox.Show("Registro editado");
             }
